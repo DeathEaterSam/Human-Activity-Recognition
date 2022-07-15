@@ -48,6 +48,17 @@ Ubuntu and Mac Example
 ./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_json output_jsons/ --keypoint_scale 3
 ```
 
-This will give the desired JSON files in the desired folder. Iterating through every 30 JSON files and appending the 75 pieces of data into one 1D array will constitute one one training example. 
+This will give the desired JSON files in the desired folder. Iterating through every 30 JSON files and appending the 75 pieces of data into one 1D array will constitute one one training example.
 
-The Output label of each training example will be a number that corresponds to the activity that's being detected. To change the amount of activities being detected, change the definition of `def vectorized_result` to `e=np.zeros((number_of_activities,1))` in line 150 of [ActivityDetection.py](ActivityDetection.py)
+The Output label of each training example will be a number that corresponds to the activity that's being detected. To change the amount of activities being detected, change the definition of `def vectorized_result(j)` to `e=np.zeros((number_of_activities,1))` in line 150 of [ActivityDetection.py](ActivityDetection.py)
+
+Implement `def load_data()` in line 157 of [ActivityDetection.py](ActivityDetection.py) based on how the training and test data has been collected. The output of `load_data()` should be `(x_train, y_train), (x_test, y_test)`. x_train should be of dimension (number of training examples, 2250) where 2250 is because each frame has 25 keypoints which translates to 75 pieces of information, coupled with 30 frames. It's assumed the coordinates of x_train are normalized between [0,1]. y_train is expected to have dimension (number_of_training_examples, 1) where the y value of each training example is the number that corresponds to the activity. x_test and y_test are defined in the same way. 
+
+Once the training and test data set is well defined and imported correctly, simply run the program to both train and test the accuracy of the neural network.
+
+# Additional Information:
+If the network does not train well under the training dataset, consider modifying the network parameters such as increasing the neurons in the hidden layers, increasing hidden layers, changing the learning rate, changing the mini-batch size, or changing the number of epochs to train for.
+
+To change the number of neurons in a hidden layer or increase the number of hidden layers, change line 176 of [ActivityDetection.py](ActivityDetection.py). For more detail, check the definition of the `Network` class initializer starting on line 13 of [ActivityDetection.py](ActivityDetection.py).
+
+To change the learning rate, mini-batch size, or number of epochs, change line 179 of [ActivityDetection.py](ActivityDetection.py). For more detail, check the definition of the `def SGD(self, training_data, epochs, mini_batch_size, eta, test_data=None)` on line 37 of [ActivityDetection.py](ActivityDetection.py).
