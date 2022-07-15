@@ -21,7 +21,7 @@ Bibliography
 
 [4] https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/02_output.md
 
-#Training the Model and Getting it to run:
+# Training the Model and Getting it to run:
 
 Configuring OpenPose:
 
