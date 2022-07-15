@@ -165,8 +165,8 @@ def load_data():
 (x_train, y_train), (x_test, y_test) = load_data()
 # x_train should be of dimension (number of training examples, 2250) where 2250 is because each frame has 25 keypoints which translates
 # to 75 pieces of information, coupled with 30 frames. It's assumed the coordinates of x_train are normalized between [0,1]. y_train
-# is expected to have dimension (number of training examples, 2) where the 2 comes from the two possibilities of detecting the activity or not
-# x_test and y_test are defined in the same way
+# is expected to have dimension (number of training examples, 1) where the y value of each training example is the number that corresponds to the activity.
+# x_test and y_test are defined in the same way.
 
 # Process data
 train, test = data_loader(x_train, y_train, x_test, y_test)
