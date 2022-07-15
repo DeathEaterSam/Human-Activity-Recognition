@@ -10,7 +10,10 @@ The input data for our model is videos that consist of a minimum of 30 frames co
 
 Bibliography
 [1] https://machinelearningmastery.com/deep-learning-models-for-human-activity-recognition/
+
 [2] https://www.v7labs.com/blog/human-pose-estimation-guide#:~:text=Human%20Pose%20Estimation%20(HPE)%20is,is%20known%20as%20a%20pair.
+
 [3] https://github.com/CMU-Perceptual-Computing-Lab/openpose
+
 [4] https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/02_output.md
 
