@@ -21,7 +21,7 @@ Bibliography
 
 [4] https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/02_output.md
 
-Training the Model and Getting it to run:
+#Training the Model and Getting it to run:
 
 Configuring OpenPose:
 
@@ -49,6 +49,8 @@ Ubuntu and Mac Example
 ```
 
 This will give the desired JSON files in the desired folder. Iterating through every 30 JSON files and appending the 75 pieces of data into one 1D array will constitute one one training example.
+
+# Collecting Training and Testing Data for the Model
 
 The Output label of each training example will be a number that corresponds to the activity that's being detected. To change the amount of activities being detected, change the definition of `def vectorized_result(j)` to `e=np.zeros((number_of_activities,1))` in line 150 of [ActivityDetection.py](ActivityDetection.py)
 
