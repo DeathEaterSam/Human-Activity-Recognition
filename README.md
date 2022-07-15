@@ -52,6 +52,8 @@ This will give the desired JSON files in the desired folder. Iterating through e
 
 # Collecting Training and Testing Data for the Model
 
+**Note: Only videos of one individual should be used for training and testing. The model is not capable of predicting multiple activities in the same video.**
+
 The Output label of each training example will be a number that corresponds to the activity that's being detected. To change the amount of activities being detected, change the definition of `def vectorized_result(j)` to `e=np.zeros((number_of_activities,1))` in line 150 of [ActivityDetection.py](ActivityDetection.py)
 
 Implement `def load_data()` in line 157 of [ActivityDetection.py](ActivityDetection.py) based on how the training and test data has been collected. The output of `load_data()` should be `(x_train, y_train), (x_test, y_test)`. x_train should be of dimension (number of training examples, 2250) where 2250 is because each frame has 25 keypoints which translates to 75 pieces of information, coupled with 30 frames. It's assumed the coordinates of x_train are normalized between [0,1]. y_train is expected to have dimension (number_of_training_examples, 1) where the y value of each training example is the number that corresponds to the activity. x_test and y_test are defined in the same way. 
