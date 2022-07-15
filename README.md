@@ -28,14 +28,14 @@ Configuring OpenPose:
 Download either the CPU version or GPU version of the OpenPose Demo from the following [link](https://github.com/CMU-Perceptual-Computing-Lab/openpose/releases)
 
 Follow the `Instructions.txt` file inside the downloaded zip file to download the models required by OpenPose (about 500 Mb).
-Then, you can run OpenPose from the PowerShell command-line or CMD by following the [demo](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/01_demo.md.)
+Then, you can run OpenPose from the PowerShell command-line or CMD by following this [demo](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/01_demo.md).
 
 
 Use the flag `--write_json folder_name\` with the video's to obtain the JSON files
 
 use flag `--keypoint_scale 3` to scale the coordinates to the range [0,1]
 
-For more information see 
+For more information on how to run the OpenPose Model, click [here](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/01_demo.md). For more information on how to modify the output of the OpenPose Model, click [here](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/02_output.md). To see other flag options, click [here](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/include/openpose/flags.hpp).
 ```
 Windows Example:
 
