@@ -28,8 +28,8 @@ Configuring OpenPose:
 Download either the CPU version or GPU version of the OpenPose Demo from the following link:
 https://github.com/CMU-Perceptual-Computing-Lab/openpose/releases
 
-Follow the Instructions.txt file inside the downloaded zip file to download the models required by OpenPose (about 500 Mb).
-Then, you can run OpenPose from the PowerShell command-line by following https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/01_demo.md.
+Follow the `Instructions.txt` file inside the downloaded zip file to download the models required by OpenPose (about 500 Mb).
+Then, you can run OpenPose from the PowerShell command-line or CMD by following https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/01_demo.md.
 
 
 Use the flag `--write_json folder_name\` with the video's to obtain the JSON files
@@ -50,3 +50,4 @@ Ubuntu and Mac Example
 
 This will give the desired JSON files in the desired folder. Iterating through every 30 JSON files and appending the 75 pieces of data into one 1D array will constitute one one training example. 
 
+The Output label of each training example will be a number that corresponds to the activity that's being detected. To change the amount of activities being detected, change the []()
